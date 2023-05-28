@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/greybox.unity
+    guid: ad2e3639ec01fcd49b39e758875503f4
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: c0d944ca9defd20449bc336e50d75a08
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bc1621d477de4934ea27a1c49239a843,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: da18e6c51c4dc874581d77e34f98b4f4,
+      type: 2}
