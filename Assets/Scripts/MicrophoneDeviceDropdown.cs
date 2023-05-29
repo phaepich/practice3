@@ -19,6 +19,5 @@ public class MicrophoneDeviceDropdown : MonoBehaviour
         }
         dropdown.ClearOptions();
         dropdown.AddOptions(microphoneList);
-        _micLoudnessDetection.MicToAudioClip(Microphone.devices[dropdown.value]);
     }
 }
