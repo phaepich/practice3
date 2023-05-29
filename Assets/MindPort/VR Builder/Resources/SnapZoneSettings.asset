@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionLayerMask:
     m_Bits: 1
-  HighlightColor: {r: 0.4627451, g: 0.3882353, b: 0.28627452, a: 0.19607843}
+  HighlightColor: {r: 1, g: 0, b: 0, a: 0.19607843}
   highlightMaterial: {fileID: 0}
-  ValidationColor: {r: 0.990566, g: 0.8268215, b: 0.60275006, a: 0.19607843}
+  ValidationColor: {r: 1, g: 1, b: 1, a: 0.19607843}
   InvalidColor: {r: 0.9529412, g: 0.3019608, b: 0.078431375, a: 0.49411765}
   validationMaterial: {fileID: 0}
   invalidMaterial: {fileID: 0}
