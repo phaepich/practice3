@@ -6549,7 +6549,7 @@ GameObject:
   - component: {fileID: 1857459468}
   - component: {fileID: 1857459469}
   m_Layer: 0
-  m_Name: Settings menu
+  m_Name: Settings menu (Pause menu)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7386,6 +7386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888809400034765771, guid: df66a08768668354388edca9cddcd2af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1888809400034765771, guid: df66a08768668354388edca9cddcd2af,
         type: 3}
