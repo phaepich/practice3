@@ -7380,7 +7380,7 @@ PrefabInstance:
     - target: {fileID: 1888809400034765771, guid: df66a08768668354388edca9cddcd2af,
         type: 3}
       propertyPath: m_Name
-      value: XR Origin
+      value: XR Origin (greybox)
       objectReference: {fileID: 0}
     - target: {fileID: 1888809400034765771, guid: df66a08768668354388edca9cddcd2af,
         type: 3}
