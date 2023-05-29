@@ -2585,7 +2585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f84f2b8a43cb84abcf29d7e444d45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockOnParentObjectLock: 1
+  lockOnParentObjectLock: 0
   attachedToSnapZone:
     m_PersistentCalls:
       m_Calls: []
@@ -2605,7 +2605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428efa2c1665b6745bfa9c1ec2026c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockOnParentObjectLock: 1
+  lockOnParentObjectLock: 0
   grabStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -8886,7 +8886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f84f2b8a43cb84abcf29d7e444d45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockOnParentObjectLock: 1
+  lockOnParentObjectLock: 0
   attachedToSnapZone:
     m_PersistentCalls:
       m_Calls: []
