@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using Vosk;
 
 public class ZombieAI : MonoBehaviour
 {
@@ -18,8 +19,6 @@ public class ZombieAI : MonoBehaviour
     [SerializeField] private float _microphoneDistance;
     public AudioSource source;
     private Animator _animator;
-    
-    public MicLoudnessDetection detector;
 
     public float threshold = 0.1f;
 
@@ -27,7 +26,6 @@ public class ZombieAI : MonoBehaviour
     private Player _player;
     private EnemyStates _currentState;
     private Vector3 _roamPosition;
-    private MicLoudnessDetection _micLoudnessDetection;
     private Vector3 _soundPosition;
 
     void TryFindTarget()
@@ -40,7 +38,7 @@ public class ZombieAI : MonoBehaviour
 
     void TryHearTarget()
     {
-        float loudness = detector.GetLoudnessFromMicrophone() * loudnessSensibility;
+        float loudness = MicrophoneRecorder.volumeLevel * loudnessSensibility;
         if (loudness < threshold) loudness = 0;
         if (loudness > _microphoneDistance)
         {
