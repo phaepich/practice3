@@ -21,6 +21,7 @@ public class MicrophoneRecorder : MonoBehaviour
         // Заполнение Dropdown и установка обработчика события выбора микрофона
         microphoneDropdown.ClearOptions();
         microphoneDropdown.AddOptions(new List<string>(microphoneDevices));
+        selectedMicrophone = Microphone.devices[0];
         microphoneDropdown.onValueChanged.AddListener(OnMicrophoneDropdownValueChanged);
 
         // Установка начального выбранного микрофона

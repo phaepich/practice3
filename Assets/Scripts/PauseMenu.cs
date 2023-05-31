@@ -6,7 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     [SerializeField] private Transform _head;
-    [SerializeField] private float _spawnDistance = 2;
+    [SerializeField] private float _spawnDistance = 2f;
     [SerializeField] private InputActionProperty _showButton;
     
     void Update()
