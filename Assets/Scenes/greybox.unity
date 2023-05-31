@@ -3069,12 +3069,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAYIewatsI7VgIAABQFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGFVMty4jAQ/BVK503KvCpkb7uGkD2QUGFTufgirDFWIUsuPQIkxb/vSJaxQw57wnT3zPQ87E/Cpakht0ovNWcrxYD8HBD/TH4MOvIRjnSn5IZ/QKt548yWXkSD5oVarhAf+jCjKrCa57/kTnhxgqCTvFC6WrAdpMpYg3BBhQGktLI+WiL0OSDHGHCKvx/+d3DGpxykBf0/lZO5oFUNzLvtxKPZ7V3U+8cgldhLVCW33nmuhOAmWiH2VIdWU1obh42ggHGKrQUTXl8C35XWp+wHPxeFARuNaXqac40TarKS36oZW0XNvnH3ToXzdYajWXDVJF1942+GgS60qh7busPE17Alz/cv9JRTY3tz7cPzr8adPFCxp1sBbyXIJ7XUykmGpNXOhzoDo3kv1aW3tIR83+kary3Yql39fUnDbknn0P4xFbzahtFPGmAjVBj4ZIr/QeNy/qDjcBomZkLUu3g18Jfu+jcUiQeujUUqFpTe3lY57aVkEYbmu3E2VVpCgGMnNUgq7GmNaez1Dq+4Xtkr5oH6tyUWj1z7ElyFBLjTJ8kVtVaHy7ZMqQ4rMOWzs4JL6Ex74gnnlCopmxPrz6QN2zhd0LwXtnOcfb0tsr27nxTT0WQ2YvfFlk1vCjZi4xmMk2TLxtN8SMLxcYl9UrFujMbx4NZkl1ziobUfkcFS0zqcO9P0sOQfleqNnMtCbXINIJ+bDBfjoLEIvphswTgOaAPWchn2TT4zIlS+B5ZdEmWh08XRapp1WTJS83dlPZKRNHw6MuLhyy2vNbxzOPjibbIzOf8DUEsDBBQAAAgIAAAYIewavMXlbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSkrmlSZqpkYmFUYplWlKKqW5ailGKsUWqsYFBUoqxabKhUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAYIewatsI7VgIAABQFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAYIewavMXlbQAAAHgAAAAJACQAAAAAAAAAAAAAAKMCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAWwMAAAAA
+    dataString: UEsDBBQAAAgIAAAYIewF+vvdVQIAABQFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGFVE2PmzAQ/SuRz90KSKJme2tJNttDNtGm1V64OHgAK8ZG/sin8t9rGxNo9tATaN6bmTdvBq6IctVAroVcSkpWggD6PkLuHX0Z9eArnHAp+JZeoON8UKIrR8Ke8441FTYeuzQlatCS5j94yRw5skHDaSFkvSAlpEJpZcMFZgosJIV22dyGriN0Cgnn8Ly45+hm33LgGuT/WIbnDNcNEKe2Jyezr9PAd6+eyu0sgRV5NBeMURWkIH1u/KgpbpSxg1gCodiO5kU4fgW0rLQrOUxeF4UCHYRJfJ5TaR1qq6KforWtxmrfqjtgZlyfOJl5VW3R1Sf8KfZwIUX92vWNI9dDVzTfv+NzjpUe+DoMz3vhsTfpiNke7xh8VMDfxFIKw4kFtTQu1ShI5oNS99nSCvJ9z2u1dsGObZrPS4r7Jd38+KeU0XrnrZ+0gS0T3vCJsxakXc4vq9ifhgqVbNSp+KPgNy6HNxSAFyqVtlBoyJ28nTDSUdHCm+amMToVkoMPh0ka4Jjp88aW0Y87fMAGbR+QF+y+ltA8YN1H8JDiwz0/ih6gjTjet6UqcVyBqtZGM8qhF+2AN+tTKjhvT2zoSZe2NbLA+SCtNJT8e1to9+15UkyTySwhz8WOTJ8KkpDxDMZRtCPjaR4jf3yU2zkx27RCgz12a7wvzu2hdT+R0VLixp87kfi4pJdaDCynvBDbXALwdVvhLhykbWI/TLIg1Bq0Ba0p9/tG1wwxke+BZPdCmZ90cdISZ32VDDX0ILSLZCj1v44MufD9ljcSDhSOrnlX7IZufwFQSwMEFAAACAgAABgh7Bq8xeVtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFKSuaVJmqmRiYVRimVaUoqpblqKUYqxRaqxgUFSirFpsqFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAABgh7AX6+91VAgAAFAUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAABgh7Bq8xeVtAAAAeAAAAAkAJAAAAAAAAAAAAAAAogIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABaAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 0
+  showNavGraphs: 1
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -5868,7 +5868,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505739240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5880,8 +5880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 8.17, y: -9.23}
+  m_SizeDelta: {x: 16.33, y: 38.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505739242
 MonoBehaviour:
@@ -7281,6 +7281,7 @@ GameObject:
   - component: {fileID: 1971082867}
   - component: {fileID: 1971082866}
   - component: {fileID: 1971082870}
+  - component: {fileID: 1971082871}
   m_Layer: 0
   m_Name: Pause menu
   m_TagString: Untagged
@@ -7399,7 +7400,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971082863}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e937affdc8786248af9a03070d462bd, type: 3}
   m_Name: 
@@ -7414,6 +7415,34 @@ MonoBehaviour:
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 39b023c9-12dc-4e53-ac7e-a15f0eae2a27
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7851394608988792201, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+--- !u!114 &1971082871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971082863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f182cb6c8fe9a4dbbcdab8ef6d8b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuCanvas: {fileID: 1971082863}
+  vrCamera: {fileID: 1566114201}
+  spawnDistance: 2
+  showButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Show Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 531b0473-03a8-477f-ac48-d6149b1e2d92
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
