@@ -4,35 +4,54 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenuUI;
-    [SerializeField] private Transform _head;
-    [SerializeField] private float _spawnDistance = 2f;
-    [SerializeField] private InputActionProperty _showButton;
-    
+    [SerializeField] private Canvas pauseMenuCanvas; // Ссылка на Canvas с окном паузы
+    [SerializeField] private Transform vrCamera; // Ссылка на камеру в VR
+    [SerializeField] private float spawnDistance = 2f;
+    [SerializeField] private InputActionProperty showButton;
+    private bool isPaused = false; // Флаг для отслеживания состояния паузы
+
+    void Start()
+    {
+        pauseMenuCanvas.enabled = false; // Скрыть окно паузы при запуске
+    }
+
     void Update()
     {
-        if (_showButton.action.WasPressedThisFrame())
+        // Проверяем нажатие на клавишу Escape на клавиатуре или кнопку "Меню" на левом контроллере
+        if (showButton.action.WasPressedThisFrame())
         {
-            if (pauseMenuUI.activeSelf)
+            if (isPaused)
             {
-                Time.timeScale = 1f;
+                ResumeGame(); // Если игра уже на паузе, продолжаем игру
             }
             else
             {
-                Time.timeScale = 0f;
+                PauseGame(); // Если игра не на паузе, ставим игру на паузу
             }
-            pauseMenuUI.SetActive(!pauseMenuUI.activeSelf);
-            pauseMenuUI.transform.position = _head.position +
-                                       new Vector3(_head.forward.x, 0, _head.forward.z).normalized * _spawnDistance;
         }
-        pauseMenuUI.transform. LookAt(new Vector3(_head.position.x, pauseMenuUI.transform.position.y, _head.position.z));
-        pauseMenuUI.transform.forward *= -1;
     }
-    
+
+    void PauseGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        pauseMenuCanvas.enabled = true;
+
+        pauseMenuCanvas.transform.position = vrCamera.position + vrCamera.forward * spawnDistance;
+        pauseMenuCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
+    }
+
+    public void ResumeGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1f; // Восстанавливаем скорость времени
+        pauseMenuCanvas.enabled = false; // Скрываем окно паузы
+    }
+
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("StartScene");
         Debug.Log("Loading menu");
     }
 }
