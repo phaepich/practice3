@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private Canvas pauseMenuCanvas; // Ссылка на Canvas с окном паузы
+    [SerializeField] private Canvas settingsMenuCanvas;
     [SerializeField] private Transform vrCamera; // Ссылка на камеру в VR
     [SerializeField] private float spawnDistance = 2f;
     [SerializeField] private InputActionProperty showButton;
@@ -39,6 +40,8 @@ public class PauseMenu : MonoBehaviour
 
         pauseMenuCanvas.transform.position = vrCamera.position + vrCamera.forward * spawnDistance;
         pauseMenuCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
+        settingsMenuCanvas.transform.position = vrCamera.position + vrCamera.forward * spawnDistance;
+        settingsMenuCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
     }
 
     public void ResumeGame()
