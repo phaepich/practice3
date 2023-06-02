@@ -8,6 +8,6 @@ public class MicrophoneVolume : MonoBehaviour
     [SerializeField] private TMP_Text text;
     void Update()
     {
-        text.text = "Громкость микрофона: (0-120) " + (int)(MicrophoneRecorder.volumeLevel * 1000f);
+        text.text = "Громкость микрофона (%): " + (int)(MicrophoneRecorder.volumeLevel * 100f / 0.12f) + "%";
     }
 }
