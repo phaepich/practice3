@@ -21,12 +21,18 @@ public class Player : MonoBehaviour
         if (health - damage <= 0)
         {
             Debug.Log("Умер");
+            Time.timeScale = 0f;
             deadCanvas.enabled = true;
             deadCanvas.transform.position = vrCamera.position + vrCamera.forward * 1;
             deadCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
             return;
         }
         health -= damage;
+    }
+
+    public void SetNormalTime()
+    {
+        Time.timeScale = 1f;
     }
     
     private void Heal()
