@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-public class EnemyAttack : MonoBehaviour
+public class ZombieAttack : MonoBehaviour
 {
         [SerializeField] private float _attackRange;
         [SerializeField] private int _damage;

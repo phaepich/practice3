@@ -235,7 +235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &14241649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10519,7 +10519,7 @@ MonoBehaviour:
   _soundTarget: {fileID: 1624072859}
   _targetFollowRange: 20
   _stopTargetFollowingRange: 30
-  _enemyAttack: {fileID: 573862646}
+  _zombieAttack: {fileID: 0}
   _aiDestinationSetter: {fileID: 573862648}
   _aiPath: {fileID: 573862644}
   _microphoneDistance: 0.5

@@ -10,7 +10,7 @@ public class ZombieAI : MonoBehaviour
     [SerializeField] private GameObject _soundTarget;
     [SerializeField] private float _targetFollowRange;
     [SerializeField] private float _stopTargetFollowingRange;
-    [SerializeField] private EnemyAttack _enemyAttack;
+    [SerializeField] private ZombieAttack _zombieAttack;
     [SerializeField] private AIDestinationSetter _aiDestinationSetter;
     [SerializeField] private AIPath _aiPath;
     [SerializeField] private float _microphoneDistance;
@@ -111,11 +111,11 @@ public class ZombieAI : MonoBehaviour
                 _aiPath.maxSpeed = 3;
                 _aiDestinationSetter.target = _player.transform;
                 if (Vector3.Distance(gameObject.transform.position, _player.transform.position) <
-                    _enemyAttack.AttackRange)
+                    _zombieAttack.AttackRange)
                 {
-                    if (_enemyAttack.CanAttack)
+                    if (_zombieAttack.CanAttack)
                     {
-                        _enemyAttack.TryAttackPlayer();
+                        _zombieAttack.TryAttackPlayer();
                         _animator.SetTrigger("Attack");
                     }
                 }
