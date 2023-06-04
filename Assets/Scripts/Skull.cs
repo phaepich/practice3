@@ -17,6 +17,7 @@ public class Skull : MonoBehaviour
         {
             // Передаем череп в триггер для обновления счетчика
             other.GetComponent<SkullTriggerHandler>().UpdateSkullsCount(1);
+            SaveLoadManager.SaveGame();
         }
     }
 
