@@ -33,8 +33,12 @@ public class ZombieAttack : MonoBehaviour
 
         public void TryAttackPlayer()
         {
-                _player.TakeDamage(_damage);
-                CanAttack = false;
+                if (Vector3.Distance(gameObject.transform.position, _player.transform.position) <
+                    _attackRange)
+                {
+                        _player.TakeDamage(_damage);
+                        CanAttack = false;
+                }
         }
 
 }

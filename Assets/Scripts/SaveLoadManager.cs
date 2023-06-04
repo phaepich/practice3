@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
@@ -5,6 +6,11 @@ using System.Collections.Generic;
 
 public class SaveLoadManager : MonoBehaviour
 {
+    private void Awake()
+    {
+        SaveGame();
+    }
+
     public static void SaveGame()
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -39,6 +45,7 @@ public class SaveLoadManager : MonoBehaviour
     public static void LoadGame()
     {
         string savePath = Application.persistentDataPath + "/savegame.dat";
+        Time.timeScale = 1f;
         if (File.Exists(savePath))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -67,18 +74,15 @@ public class SaveLoadManager : MonoBehaviour
             Debug.Log("Save file not found.");
         }
     }
-    private static GameObject FindEnemyByPosition(Vector3 position)
+    public static void DeleteSaveGame()
     {
-        GameObject[] enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject enemyObject in enemyObjects)
+        string savePath = Application.persistentDataPath + "/savegame.dat";
+        if (File.Exists(savePath))
         {
-            if (enemyObject.transform.position == position)
-            {
-                return enemyObject;
-            }
+            File.Delete(savePath);
         }
-        return null;
     }
+    
 }
 [System.Serializable]
 public class GameData
