@@ -6,15 +6,13 @@ public class ScreenFader : MonoBehaviour
     public float fadeSpeed; // Скорость затемнения
 
     private Image fadePanel;
-    [SerializeField] private Canvas deadCanvas;
-    [SerializeField] private Canvas finalCanvas;
-    [SerializeField] private Transform vrCamera;
+
     public bool isFading = false;
 
 
     private void Start()
     {
-        deadCanvas.enabled = false;
+        //deadCanvas.enabled = false; 
         fadePanel = GetComponentInChildren<Image>();
     }
 
@@ -33,12 +31,7 @@ public class ScreenFader : MonoBehaviour
             if (fadePanel.color.a >= 0.99f)
             {
                 isFading = false;
-                Time.timeScale = 0f;
-                deadCanvas.enabled = true;
-                deadCanvas.transform.position = vrCamera.position + vrCamera.forward * 1;
-                deadCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
-                finalCanvas.transform.position = vrCamera.position + vrCamera.forward * 1;
-                finalCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
+                
             }
         }
     }

@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private float healPerSecond;
     public float health; 
+    [SerializeField] private Canvas deadCanvas;
+    [SerializeField] private Canvas finalCanvas;
+    [SerializeField] private Transform vrCamera;
 
     public void TakeDamage(int damage)
     {
@@ -14,6 +17,12 @@ public class Player : MonoBehaviour
         {
             TimerScript.StopTimer();
             Debug.Log("Умер");
+            Time.timeScale = 0f;
+            deadCanvas.enabled = true;
+            deadCanvas.transform.position = vrCamera.position + vrCamera.forward * 1;
+            deadCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
+            finalCanvas.transform.position = vrCamera.position + vrCamera.forward * 1;
+            finalCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
             return;
         }
         health -= damage;
