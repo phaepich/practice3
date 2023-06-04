@@ -36,7 +36,6 @@ public class SaveLoadManager : MonoBehaviour
             enemyDataList.Add(enemyData);
         }
         data.enemyDataList = enemyDataList;
-        data.skullCount = SkullManager.instance.skullCount;
 
         formatter.Serialize(fileStream, data);
         fileStream.Close();
@@ -66,8 +65,6 @@ public class SaveLoadManager : MonoBehaviour
                     enemyObject.transform.position = enemyPosition;
                 }
             }
-
-            SkullManager.instance.skullCount = data.skullCount;
         }
         else
         {
@@ -92,7 +89,6 @@ public class GameData
     public float playerPosZ;
     public float playerHealth;
     public EnemyData[] enemies;
-    public int skullCount;
     public List<EnemyData> enemyDataList;
 }
 
@@ -103,3 +99,4 @@ public class EnemyData
     public float enemyPosY;
     public float enemyPosZ;
 }
+
