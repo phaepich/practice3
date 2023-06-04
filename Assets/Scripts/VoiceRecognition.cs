@@ -8,9 +8,14 @@ public class VoiceRecognition : MonoBehaviour
 {
     [SerializeField] private string _phrase;
     private Dictionary<string, Action> _keywordActions = new Dictionary<string, Action>();
-    private KeywordRecognizer _keywordRecognizer;
+    public KeywordRecognizer _keywordRecognizer;
+    private FinalMenu _finalMenu;
+    [SerializeField] private Transform vrCamera;
+    public bool isGameCompleted;
     void Start()
     {
+        _finalMenu = FindObjectOfType<FinalMenu>();
+        isGameCompleted = false;
         _keywordActions.Add(_phrase, CompleteGame);
         _keywordRecognizer = new KeywordRecognizer(_keywordActions.Keys.ToArray());
         _keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
@@ -24,6 +29,10 @@ public class VoiceRecognition : MonoBehaviour
     }
     void CompleteGame()
     {
+        isGameCompleted = true;
+        _finalMenu.transform.position = vrCamera.position + vrCamera.forward * 1;
+        _finalMenu.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
+        _finalMenu.gameObject.SetActive(true);
         Debug.Log("Game completed");
     }
 }

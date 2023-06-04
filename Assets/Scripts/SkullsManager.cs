@@ -1,13 +1,25 @@
+using System;
 using UnityEngine;
 
 public class SkullsManager : MonoBehaviour
 {
     public int skullsDeliveredCount = 0;
+    private VoiceRecognition _voiceRecognition;
 
-    // Функция для обновления счетчика черепов
+    private void Start()
+    {
+        _voiceRecognition = FindObjectOfType<VoiceRecognition>();
+        _voiceRecognition.enabled = false;
+        _voiceRecognition._keywordRecognizer.Stop();
+    }
+
     public void UpdateSkullsDeliveredCount(int skullsInTrigger)
     {
         skullsDeliveredCount = skullsInTrigger;
-        // Можно добавить здесь дополнительную логику при обновлении счетчика черепов
+        if (skullsDeliveredCount == 4)
+        {
+            _voiceRecognition.enabled = true;
+            _voiceRecognition._keywordRecognizer.Start();
+        }
     }
 }

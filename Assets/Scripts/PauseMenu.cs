@@ -1,3 +1,4 @@
+using System.Timers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
     void PauseGame()
     {
         isPaused = true;
+        TimerScript.StopTimer();
         Time.timeScale = 0f;
         pauseMenuCanvas.enabled = true;
 
@@ -47,6 +49,7 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         isPaused = false;
+        TimerScript.StartTimer();
         Time.timeScale = 1f; // Восстанавливаем скорость времени
         pauseMenuCanvas.enabled = false; // Скрываем окно паузы
     }

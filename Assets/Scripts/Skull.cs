@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Skull : MonoBehaviour
 {
-    private SkullsManager skullsManager;
+    private SkullsManager _skullsManager;
 
     private void Start()
     {
-        skullsManager = GameObject.FindObjectOfType<SkullsManager>();
+        _skullsManager = FindObjectOfType<SkullsManager>();
     }
 
     private void OnTriggerEnter(Collider other)

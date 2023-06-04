@@ -63,6 +63,7 @@ public class SaveLoadManager : MonoBehaviour
     {
         string savePath = Application.persistentDataPath + "/savegame.dat";
         Time.timeScale = 1f;
+        TimerScript.StartTimer();
         if (File.Exists(savePath))
         {
             BinaryFormatter formatter = new BinaryFormatter();
