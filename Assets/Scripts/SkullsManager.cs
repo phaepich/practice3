@@ -9,8 +9,6 @@ public class SkullsManager : MonoBehaviour
     private void Start()
     {
         _voiceRecognition = FindObjectOfType<VoiceRecognition>();
-        _voiceRecognition.enabled = false;
-        _voiceRecognition._keywordRecognizer.Stop();
     }
 
     public void UpdateSkullsDeliveredCount(int skullsInTrigger)
@@ -18,8 +16,7 @@ public class SkullsManager : MonoBehaviour
         skullsDeliveredCount = skullsInTrigger;
         if (skullsDeliveredCount == 4)
         {
-            _voiceRecognition.enabled = true;
-            _voiceRecognition._keywordRecognizer.Start();
+            _voiceRecognition.ToggleListening(true);
         }
     }
 }

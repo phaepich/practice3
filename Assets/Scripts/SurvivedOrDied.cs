@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SurvivedOrDied : MonoBehaviour
 {
-    private TMP_Text _text;
+    [SerializeField] private TMP_Text text;
     private VoiceRecognition _voiceRecognition;
 
     private void Start()
@@ -12,11 +12,16 @@ public class SurvivedOrDied : MonoBehaviour
         _voiceRecognition = FindObjectOfType<VoiceRecognition>();
         if (_voiceRecognition.isGameCompleted)
         {
-            _text.text = "ВЫЖИЛ";
+            text.text = "ВЫЖИЛ";
         }
         else
         {
-            _text.text = "ПОМЕР";
+            text.text = "ПОМЕР";
         }
+    }
+
+    private void Update()
+    {
+        
     }
 }

@@ -6,13 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     [SerializeField] private float healPerSecond;
-    public float health;
-    private ScreenFader screenFader;
-
-    private void Start()
-    {
-        screenFader = GameObject.Find("Fader").GetComponent<ScreenFader>();
-    }
+    public float health; 
 
     public void TakeDamage(int damage)
     {
@@ -20,7 +14,6 @@ public class Player : MonoBehaviour
         {
             TimerScript.StopTimer();
             Debug.Log("Умер");
-            screenFader.StartFade();
             return;
         }
         health -= damage;

@@ -99,7 +99,7 @@ public class ZombieAI : MonoBehaviour
             case EnemyStates.Roaming:
                 _animator.SetBool("IsWalking", true);
                 _animator.SetBool("IsFollowing", false);
-                _aiPath.maxSpeed = 1.5f;
+                _aiPath.maxSpeed = 0.7f;
                 _roamTarget.transform.position = _roamPosition;
                 if (Vector3.Distance(gameObject.transform.position, _roamPosition) <= _reachedPointDistance)
                 {
@@ -122,6 +122,7 @@ public class ZombieAI : MonoBehaviour
                 {
                     if (_zombieAttack.CanAttack)
                     {
+                        _animator.SetBool("IsFollowing", false);
                         _animator.SetTrigger("Attack");
                         _isAttacking = true; // Устанавливаем флаг, что атака началась
                     }

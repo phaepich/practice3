@@ -5,7 +5,6 @@ public class ZombieAttack : MonoBehaviour
         [SerializeField] private float _attackRange;
         [SerializeField] private int _damage;
         [SerializeField] private float _cooldown;
-        [SerializeField] private float _timeToDamage;
         private float _timer;
         public bool CanAttack { get; private set; }
         private Player _player;
