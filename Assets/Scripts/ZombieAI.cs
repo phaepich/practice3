@@ -10,12 +10,13 @@ public class ZombieAI : MonoBehaviour
     [SerializeField] private GameObject _soundTarget;
     [SerializeField] private float _targetFollowRange;
     [SerializeField] private float _stopTargetFollowingRange;
-    [SerializeField] private EnemyAttack _enemyAttack;
+    [SerializeField] private ZombieAttack _zombieAttack;
     [SerializeField] private AIDestinationSetter _aiDestinationSetter;
     [SerializeField] private AIPath _aiPath;
     [SerializeField] private float _microphoneDistance;
     public AudioSource source;
     private Animator _animator;
+    private bool _isAttacking;
 
     public float threshold = 0.1f;
     public float loudnessSensibility = 100;
@@ -77,6 +78,11 @@ public class ZombieAI : MonoBehaviour
         return newDirection.normalized;
     }
 
+    public void AttackAnimationEvent()
+    {
+        _zombieAttack.TryAttackPlayer();
+        _isAttacking = false; // Сбрасываем флаг, чтобы можно было совершить следующую атаку
+    }
     void Start()
     {
         _animator = gameObject.GetComponent<Animator>();
@@ -110,13 +116,14 @@ public class ZombieAI : MonoBehaviour
                 _animator.SetBool("IsWalking", false);
                 _aiPath.maxSpeed = 3;
                 _aiDestinationSetter.target = _player.transform;
-                if (Vector3.Distance(gameObject.transform.position, _player.transform.position) <
-                    _enemyAttack.AttackRange)
+                // Проверяем, выполняется ли уже атака
+                if (!_isAttacking && Vector3.Distance(gameObject.transform.position, _player.transform.position) <
+                    _zombieAttack.AttackRange)
                 {
-                    if (_enemyAttack.CanAttack)
+                    if (_zombieAttack.CanAttack)
                     {
-                        _enemyAttack.TryAttackPlayer();
                         _animator.SetTrigger("Attack");
+                        _isAttacking = true; // Устанавливаем флаг, что атака началась
                     }
                 }
                 if (Vector3.Distance(gameObject.transform.position, _player.transform.position) >=

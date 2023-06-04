@@ -1,29 +1,48 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private int _maxHealth;
-    [SerializeField] private float _healPerSecond;
-    [SerializeField] private float _health;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private float healPerSecond;
+    public float health;
+    [SerializeField] private Canvas deadCanvas;
+    [SerializeField] private Transform vrCamera;
+
+    private void Start()
+    {
+        deadCanvas.enabled = false;
+        
+    }
 
     public void TakeDamage(int damage)
     {
-        if (_health - damage <= 0)
+        if (health - damage <= 0)
         {
             Debug.Log("Умер");
+            Time.timeScale = 0f;
+            deadCanvas.enabled = true;
+            deadCanvas.transform.position = vrCamera.position + vrCamera.forward * 1;
+            deadCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
             return;
         }
-        _health -= damage;
+        health -= damage;
+    }
+
+    public void SetNormalTime()
+    {
+        Time.timeScale = 1f;
     }
     
     private void Heal()
     {
-        if (_health >= _maxHealth)
+        if (health >= maxHealth)
         {
-            _health = _maxHealth;
+            health = maxHealth;
             return;
         }
-        _health += Time.deltaTime * _healPerSecond;
+        health += Time.deltaTime * healPerSecond;
     }
     void Update()
     {

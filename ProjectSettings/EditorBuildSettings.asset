@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: f2a9471dfe1fab042b627e0b5e4ab398
   - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: c0d944ca9defd20449bc336e50d75a08
+    path: Assets/Scenes/NEW GAME(katya).unity
+    guid: f12922ec37698004fa0938bfef6f4f6f
   - enabled: 1
     path: Assets/Scenes/greybox.unity
     guid: ad2e3639ec01fcd49b39e758875503f4
+  - enabled: 0
+    path: Assets/Scenes/Game.unity
+    guid: c0d944ca9defd20449bc336e50d75a08
+  - enabled: 0
+    path: Assets/Flooded_Grounds/Scenes/Scene_A.unity
+    guid: db4ffe4929796ca48a9433f10d62af42
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bc1621d477de4934ea27a1c49239a843,
       type: 2}
