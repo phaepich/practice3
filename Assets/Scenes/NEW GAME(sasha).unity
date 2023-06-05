@@ -15030,6 +15030,8 @@ MonoBehaviour:
   _attackRange: 3
   _damage: 30
   _cooldown: 1
+  _timeToDamage: 0
+  musicClip: {fileID: 0}
 --- !u!114 &416842535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24189,7 +24191,7 @@ RectTransform:
   m_GameObject: {fileID: 689338215}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 2.776}
-  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1001780804}
@@ -33134,7 +33136,7 @@ RectTransform:
   m_GameObject: {fileID: 879439163}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 1.483}
-  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 864616831}
@@ -38673,8 +38675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aed3e1684f0a3ac46ae552f0ddbaa88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 150
-  healPerSecond: 2
+  maxHealth: 100
+  healPerSecond: 1
   health: 10
   deadCanvas: {fileID: 689338217}
   finalCanvas: {fileID: 879439165}
@@ -42048,6 +42050,8 @@ MonoBehaviour:
   _attackRange: 3
   _damage: 30
   _cooldown: 1
+  _timeToDamage: 0
+  musicClip: {fileID: 0}
 --- !u!114 &1025156462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54937,6 +54941,8 @@ MonoBehaviour:
   _attackRange: 3
   _damage: 30
   _cooldown: 1
+  _timeToDamage: 0
+  musicClip: {fileID: 0}
 --- !u!114 &1459710281
 MonoBehaviour:
   m_ObjectHideFlags: 0

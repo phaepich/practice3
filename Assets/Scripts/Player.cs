@@ -19,9 +19,9 @@ public class Player : MonoBehaviour
             Debug.Log("Умер");
             Time.timeScale = 0f;
             deadCanvas.enabled = true;
-            deadCanvas.transform.position = vrCamera.position + vrCamera.forward * 1;
+            deadCanvas.transform.position = vrCamera.position + vrCamera.forward * 0.5f;
             deadCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
-            finalCanvas.transform.position = vrCamera.position + vrCamera.forward * 1;
+            finalCanvas.transform.position = vrCamera.position + vrCamera.forward * 0.5f;
             finalCanvas.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
             return;
         }
