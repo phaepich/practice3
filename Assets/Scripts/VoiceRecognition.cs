@@ -6,18 +6,19 @@ using UnityEngine.Windows.Speech;
 
 public class VoiceRecognition : MonoBehaviour
 {
-    [SerializeField] private string _phrase;
+    public string phrase;
     private Dictionary<string, Action> _keywordActions = new Dictionary<string, Action>();
     public KeywordRecognizer _keywordRecognizer;
     private bool isListening = false;
     [SerializeField] private FinalMenu _finalMenu;
     [SerializeField] private Transform vrCamera;
+    [SerializeField] private PhraseText phraseText;
     public bool isGameCompleted;
     void Start()
     {
         if (isListening)
         {
-            _keywordActions.Add(_phrase, CompleteGame);
+            _keywordActions.Add(phrase, CompleteGame);
             _keywordRecognizer = new KeywordRecognizer(_keywordActions.Keys.ToArray());
             _keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
             _keywordRecognizer.Start();
@@ -38,7 +39,7 @@ public class VoiceRecognition : MonoBehaviour
 
         if (isListening)
         {
-            _keywordActions.Add(_phrase, CompleteGame);
+            _keywordActions.Add(phrase, CompleteGame);
             _keywordRecognizer = new KeywordRecognizer(_keywordActions.Keys.ToArray());
             _keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
             _keywordRecognizer.Start();
@@ -56,8 +57,9 @@ public class VoiceRecognition : MonoBehaviour
         Debug.Log("Game completed");
         _finalMenu.transform.position = vrCamera.position + vrCamera.forward * 1;
         _finalMenu.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
-        Time.timeScale = 0f;
         _finalMenu.gameObject.SetActive(true);
+        phraseText.gameObject.SetActive(true);
+        Time.timeScale = 0f;
     }
     public void OnDisable()
     {

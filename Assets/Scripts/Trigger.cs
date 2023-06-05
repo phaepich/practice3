@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    public AudioClip musicClip;
+    [SerializeField] private AudioClip musicClip;
     private AudioSource musicSource;
-    [SerializeField] private GameObject _gameObject;
+    [SerializeField] private GameObject scp;
     private bool k = false;
     public Transform objectToMove; // Объект, который нужно переместить
     public Vector3 targetPosition; // Целевая позиция, куда нужно переместить объект
@@ -23,8 +23,8 @@ public class Trigger : MonoBehaviour
         {
             if (gameObject.name == "Trigger1")
             {
-                _gameObject.transform.position = new Vector3(506.01f, 7.672f , 500.647f);
-                _gameObject.transform.rotation = new Quaternion(0.0506434217f,0.992991865f,-0.00543892104f,-0.106643818f);
+                scp.transform.position = new Vector3(506.01f, 7.672f , 500.647f);
+                scp.transform.rotation = new Quaternion(0.0506434217f,0.992991865f,-0.00543892104f,-0.106643818f);
                 if (!musicSource.isPlaying)
                 {
                     musicSource.clip = musicClip;
@@ -33,8 +33,8 @@ public class Trigger : MonoBehaviour
             }
             if (gameObject.name == "Trigger2")
             {
-                _gameObject.transform.position = new Vector3(521.974f, 5.174f , 501.793f);
-                _gameObject.transform.rotation = new Quaternion(-0.230122626f,0.968811214f,0.000378430646f,-0.0919149145f);
+                scp.transform.position = new Vector3(526.139404f,7.42729616f,512.047791f);
+                scp.transform.rotation = new Quaternion(-0.230122626f,0.968811214f,0.000378430646f,-0.0919149145f);
                 if (!musicSource.isPlaying)
                 {
                     musicSource.clip = musicClip;
@@ -45,8 +45,8 @@ public class Trigger : MonoBehaviour
             if (gameObject.name == "Trigger3")
             {
                 playerEnteredTrigger = true;
-                _gameObject.transform.position = new Vector3(526.155f, 13.22f , 512.128f);
-                _gameObject.transform.rotation = new Quaternion(-0.0470253006f,0.994655788f,-0.0166228134f,-0.0904000923f);
+                scp.transform.position = new Vector3(525.5909f, 13.22f , 519.312f);
+                scp.transform.rotation = new Quaternion(-0.0470253006f,0.994655788f,-0.0166228134f,-0.0904000923f);
                 if (!musicSource.isPlaying)
                 {
                     musicSource.clip = musicClip;
@@ -62,35 +62,36 @@ public class Trigger : MonoBehaviour
         {
             if (gameObject.name == "Trigger1")
             {
-                _gameObject.transform.position = new Vector3(0, 0, 0);
-                _gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+                scp.transform.position = new Vector3(0, 0, 0);
+                scp.transform.rotation = new Quaternion(0, 0, 0, 0);
                 Destroy(gameObject);
             }
             if (gameObject.name == "Trigger2")
             {
-                _gameObject.transform.position = new Vector3(0, 0, 0);
-                _gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+                scp.transform.position = new Vector3(0, 0, 0);
+                scp.transform.rotation = new Quaternion(0, 0, 0, 0);
                 Destroy(gameObject);
-            }
-            if (gameObject.name == "Trigger3")
-            {
-                playerEnteredTrigger = false;
-                _gameObject.transform.position = new Vector3(0, 0, 0);
-                _gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
-                Destroy(gameObject);
-            }
+            }            
+
             
         }
     }
     private void Update()
     {
-        if (playerEnteredTrigger && conditionMet)
+        if (playerEnteredTrigger)
         {
             MoveObject();
+            if (objectToMove.position == targetPosition)
+            {
+                scp.transform.position = new Vector3(0, 0, 0);
+                scp.transform.rotation = new Quaternion(0, 0, 0, 0);
+                Destroy(gameObject);
+            }
         }
     }
     private void MoveObject()
     {
         objectToMove.position = Vector3.MoveTowards(objectToMove.position, targetPosition, Time.deltaTime * moveSpeed);
+        
     }
 }
