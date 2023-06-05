@@ -32998,6 +32998,9 @@ MonoBehaviour:
   maxHealth: 150
   healPerSecond: 2
   health: 100
+  deadCanvas: {fileID: 0}
+  finalCanvas: {fileID: 0}
+  vrCamera: {fileID: 0}
 --- !u!114 &991370686
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class Trigger : MonoBehaviour
             if (gameObject.name == "Trigger2")
             {
                 _gameObject.transform.position = new Vector3(521.974f, 5.174f , 501.793f);
-                _gameObject.transform.rotation = new Quaternion(0,0,0,1);
+                _gameObject.transform.rotation = new Quaternion(-0.230122626f,0.968811214f,0.000378430646f,-0.0919149145f);
                 if (!musicSource.isPlaying)
                 {
                     musicSource.clip = musicClip;
