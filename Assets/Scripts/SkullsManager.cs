@@ -4,8 +4,13 @@ using UnityEngine;
 public class SkullsManager : MonoBehaviour
 {
     public int skullsDeliveredCount = 0;
-    public VoiceRecognition _voiceRecognition;
+    private VoiceRecognition _voiceRecognition;
     public PhraseText phraseText;
+
+    private void Start()
+    {
+        _voiceRecognition = FindObjectOfType<VoiceRecognition>();
+    }
 
     public void UpdateSkullsDeliveredCount(int skullsInTrigger)
     {

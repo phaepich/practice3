@@ -4044,7 +4044,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skullsDeliveredCount: 0
-  _voiceRecognition: {fileID: 1997922930}
   phraseText: {fileID: 966566430}
 --- !u!1001 &55464973
 PrefabInstance:
@@ -40931,23 +40930,6 @@ MonoBehaviour:
   deadCanvas: {fileID: 1072442134}
   finalCanvas: {fileID: 1203884348}
   vrCamera: {fileID: 991370681}
---- !u!114 &991370686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991370683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878c16778d7e72e41b23c9bf2b0f10ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phrase: let me out
-  _finalMenu: {fileID: 1203884344}
-  vrCamera: {fileID: 991370681}
-  phraseText: {fileID: 966566430}
-  isGameCompleted: 0
 --- !u!82 &991370687
 AudioSource:
   m_ObjectHideFlags: 0

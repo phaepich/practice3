@@ -16,12 +16,13 @@ public class VoiceRecognition : MonoBehaviour
     public bool isGameCompleted;
     void Start()
     {
-   
-        _keywordActions.Add(phrase, CompleteGame);
-        _keywordRecognizer = new KeywordRecognizer(_keywordActions.Keys.ToArray());
-        _keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
-        _keywordRecognizer.Start();
-        
+        if (isListening)
+        {
+            _keywordActions.Add(phrase, CompleteGame);
+            _keywordRecognizer = new KeywordRecognizer(_keywordActions.Keys.ToArray());
+            _keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
+            _keywordRecognizer.Start();
+        }
     }
 
     void OnKeywordsRecognized(PhraseRecognizedEventArgs args)
@@ -36,7 +37,19 @@ public class VoiceRecognition : MonoBehaviour
     {
         isListening = enable;
 
-
+        if (isListening)
+        {
+            _keywordActions.Add(phrase, CompleteGame);
+            _keywordRecognizer = new KeywordRecognizer(_keywordActions.Keys.ToArray());
+            _keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
+            _keywordRecognizer.Start();
+        }
+        else
+        {
+            _keywordRecognizer.Stop();
+            _keywordRecognizer.Dispose();
+            _keywordActions.Clear();
+        }
     }
     void CompleteGame()
     {
@@ -45,7 +58,7 @@ public class VoiceRecognition : MonoBehaviour
         _finalMenu.transform.position = vrCamera.position + vrCamera.forward * 1;
         _finalMenu.transform.rotation = Quaternion.LookRotation(vrCamera.forward);
         _finalMenu.gameObject.SetActive(true);
-        
+        phraseText.gameObject.SetActive(true);
         Time.timeScale = 0f;
     }
     public void OnDisable()
