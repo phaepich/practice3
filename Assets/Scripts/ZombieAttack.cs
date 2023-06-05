@@ -6,6 +6,8 @@ public class ZombieAttack : MonoBehaviour
         [SerializeField] private int _damage;
         [SerializeField] private float _cooldown;
         [SerializeField] private float _timeToDamage;
+        public AudioClip musicClip;
+        private AudioSource musicSource;
         private float _timer;
         public bool CanAttack { get; private set; }
         private Player _player;
@@ -33,6 +35,11 @@ public class ZombieAttack : MonoBehaviour
 
         public void TryAttackPlayer()
         {
+                if (!musicSource.isPlaying)
+                {
+                        musicSource.clip = musicClip;
+                        musicSource.Play();
+                }
                 if (Vector3.Distance(gameObject.transform.position, _player.transform.position) <
                     _attackRange)
                 {

@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartScene.unity
     guid: f2a9471dfe1fab042b627e0b5e4ab398
   - enabled: 1
     path: Assets/Scenes/NEW GAME(katya).unity
     guid: f12922ec37698004fa0938bfef6f4f6f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/greybox.unity
     guid: ad2e3639ec01fcd49b39e758875503f4
   - enabled: 0
