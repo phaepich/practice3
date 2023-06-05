@@ -4,12 +4,8 @@ using UnityEngine;
 public class SkullsManager : MonoBehaviour
 {
     public int skullsDeliveredCount = 0;
-    private VoiceRecognition _voiceRecognition;
-
-    private void Start()
-    {
-        _voiceRecognition = FindObjectOfType<VoiceRecognition>();
-    }
+    public VoiceRecognition _voiceRecognition;
+    public PhraseText phraseText;
 
     public void UpdateSkullsDeliveredCount(int skullsInTrigger)
     {
@@ -17,6 +13,7 @@ public class SkullsManager : MonoBehaviour
         if (skullsDeliveredCount == 4)
         {
             _voiceRecognition.ToggleListening(true);
+            phraseText.gameObject.SetActive(true);
         }
     }
 }
