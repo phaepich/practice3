@@ -54,6 +54,31 @@ public class Trigger : MonoBehaviour
                 }
                 
             }
+            
+            if (gameObject.name == "Trigger3 (1)")
+            {
+                playerEnteredTrigger = true;
+                scp.transform.position = new Vector3(423.611f, 22.338f , 393.758f); 
+                scp.transform.rotation = new Quaternion(-0.0875115246f,0.493071556f,0.00488754362f,-0.865562499f);
+                if (!musicSource.isPlaying)
+                {
+                    musicSource.clip = musicClip;
+                    musicSource.Play();
+                }
+                
+            }
+            
+            if (gameObject.name == "Trigger2 (1)")
+            {
+                scp.transform.position = new Vector3(450.85f, 2.372f , 502.431f);
+                scp.transform.rotation = new Quaternion(-0.0445940532f, 0.995361626f, -0.0754555538f, 0.0396621153f);
+                if (!musicSource.isPlaying)
+                {
+                    musicSource.clip = musicClip;
+                    musicSource.Play();
+                }
+                
+            }
         }
     }
     private void OnTriggerExit(Collider col)
@@ -72,7 +97,12 @@ public class Trigger : MonoBehaviour
                 scp.transform.rotation = new Quaternion(0, 0, 0, 0);
                 Destroy(gameObject);
             }            
-
+            if (gameObject.name == "Trigger2 (1)")
+            {
+                scp.transform.position = new Vector3(0, 0, 0);
+                scp.transform.rotation = new Quaternion(0, 0, 0, 0);
+                Destroy(gameObject);
+            }
             
         }
     }

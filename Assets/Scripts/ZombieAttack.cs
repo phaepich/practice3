@@ -35,7 +35,7 @@ public class ZombieAttack : MonoBehaviour
 
         public void TryAttackPlayer()
         {
-                if (!musicSource.isPlaying)
+                if (musicSource != null)
                 {
                         musicSource.clip = musicClip;
                         musicSource.Play();
